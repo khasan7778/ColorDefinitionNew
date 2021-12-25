@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		58A1A89427772B620034E377 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A1A89327772B620034E377 /* AppDelegate.swift */; };
 		58A1A89627772B620034E377 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A1A89527772B620034E377 /* SceneDelegate.swift */; };
-		58A1A89827772B620034E377 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A1A89727772B620034E377 /* ViewController.swift */; };
+		58A1A89827772B620034E377 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A1A89727772B620034E377 /* StartViewController.swift */; };
 		58A1A89B27772B620034E377 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58A1A89927772B620034E377 /* Main.storyboard */; };
 		58A1A89D27772B640034E377 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58A1A89C27772B640034E377 /* Assets.xcassets */; };
 		58A1A8A027772B640034E377 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58A1A89E27772B640034E377 /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		58A1A89027772B620034E377 /* ColorDefinitionNew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorDefinitionNew.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58A1A89327772B620034E377 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58A1A89527772B620034E377 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		58A1A89727772B620034E377 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		58A1A89727772B620034E377 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		58A1A89A27772B620034E377 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		58A1A89C27772B640034E377 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58A1A89F27772B640034E377 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -68,7 +68,7 @@
 		58A1A8A727772BD70034E377 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				58A1A89727772B620034E377 /* ViewController.swift */,
+				58A1A89727772B620034E377 /* StartViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -178,7 +178,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58A1A89827772B620034E377 /* ViewController.swift in Sources */,
+				58A1A89827772B620034E377 /* StartViewController.swift in Sources */,
 				58A1A89427772B620034E377 /* AppDelegate.swift in Sources */,
 				58A1A89627772B620034E377 /* SceneDelegate.swift in Sources */,
 			);
@@ -331,7 +331,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NC9GUL5TMH;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ColorDefinitionNew/Info.plist;
+				INFOPLIST_FILE = ColorDefinitionNew/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -359,7 +359,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NC9GUL5TMH;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ColorDefinitionNew/Info.plist;
+				INFOPLIST_FILE = ColorDefinitionNew/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
