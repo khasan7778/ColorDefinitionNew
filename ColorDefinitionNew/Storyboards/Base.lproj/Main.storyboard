@@ -42,10 +42,10 @@
             </objects>
             <point key="canvasLocation" x="800.79999999999995" y="97.601199400299862"/>
         </scene>
-        <!--View Controller-->
+        <!--Setting View Controller-->
         <scene sceneID="Kzk-gv-IsT">
             <objects>
-                <viewController id="LIb-OA-1PR" sceneMemberID="viewController">
+                <viewController id="LIb-OA-1PR" customClass="SettingViewController" customModule="ColorDefinitionNew" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gn4-lc-KJe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,10 +57,10 @@
                                     <constraint firstAttribute="width" secondItem="g4N-SB-D69" secondAttribute="height" multiplier="335:206" id="I77-Bp-7Cw"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="HrF-er-62m">
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="HrF-er-62m" userLabel="Stack View General">
                                 <rect key="frame" x="20" y="246" width="335" height="130"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Bke-3m-vzd">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Bke-3m-vzd" userLabel="Stack View Color">
                                         <rect key="frame" x="0.0" y="0.0" width="51" height="130"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Red:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJa-TO-zK1">
@@ -86,7 +86,7 @@
                                             <constraint firstAttribute="width" constant="51" id="dgQ-PR-208"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ZFq-UN-NY1">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ZFq-UN-NY1" userLabel="Stack View Meaning">
                                         <rect key="frame" x="56" y="0.0" width="42" height="130"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKW-IK-vG4">
@@ -112,26 +112,35 @@
                                             <constraint firstAttribute="width" constant="42" id="95p-E2-OpL"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="guh-ZJ-QhP">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="guh-ZJ-QhP" userLabel="Stack View Slider">
                                         <rect key="frame" x="103" y="0.0" width="170" height="130"/>
                                         <subviews>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="oAI-Z1-iiE">
                                                 <rect key="frame" x="-2" y="0.0" width="174" height="31"/>
                                                 <color key="minimumTrackTintColor" systemColor="systemRedColor"/>
+                                                <connections>
+                                                    <action selector="rgbSlider" destination="LIb-OA-1PR" eventType="valueChanged" id="R9P-7H-pwB"/>
+                                                </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="PT5-ja-HDC">
                                                 <rect key="frame" x="-2" y="50" width="174" height="31"/>
                                                 <color key="minimumTrackTintColor" systemColor="systemGreenColor"/>
+                                                <connections>
+                                                    <action selector="rgbSlider" destination="LIb-OA-1PR" eventType="valueChanged" id="OQC-TR-y5k"/>
+                                                </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="7G1-we-2rc">
                                                 <rect key="frame" x="-2" y="100" width="174" height="31"/>
+                                                <connections>
+                                                    <action selector="rgbSlider" destination="LIb-OA-1PR" eventType="valueChanged" id="eEp-iz-TXa"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="170" id="E91-IB-uuW"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="sck-1F-E4A">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="sck-1F-E4A" userLabel="Stack View TF">
                                         <rect key="frame" x="278" y="0.0" width="57" height="130"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Na-if-FUC">
@@ -177,6 +186,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xxJ-qV-0Mn"/>
+                    <connections>
+                        <outlet property="blueSlider" destination="7G1-we-2rc" id="sXe-3a-wU4"/>
+                        <outlet property="blueTF" destination="H8q-Gp-Dqv" id="XOq-hQ-JLP"/>
+                        <outlet property="colorDefinitionMini" destination="g4N-SB-D69" id="I7X-uk-G7J"/>
+                        <outlet property="greenSlider" destination="PT5-ja-HDC" id="2ri-Rv-xpr"/>
+                        <outlet property="greenTF" destination="tIW-nT-kbG" id="z8M-ru-blZ"/>
+                        <outlet property="meaningBlueSlider" destination="gmm-Z7-Aax" id="PyU-nT-Pj6"/>
+                        <outlet property="meaningGreenSlider" destination="wlO-k0-bEN" id="LrU-HX-ccz"/>
+                        <outlet property="meaningRedSlider" destination="CKW-IK-vG4" id="clw-9X-B8p"/>
+                        <outlet property="redSlider" destination="oAI-Z1-iiE" id="2de-fO-bPj"/>
+                        <outlet property="redTF" destination="0Na-if-FUC" id="qc6-7S-psc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="USg-F5-8fR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
