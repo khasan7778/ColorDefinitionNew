@@ -25,7 +25,7 @@ class SettingsViewController: UIViewController {
     
     var background: UIColor!
     var delegate: SettingsViewControllerDelegate!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         colorDefinitionMini.backgroundColor = background
@@ -41,15 +41,6 @@ class SettingsViewController: UIViewController {
         blueTF.delegate = self
         
         rgbSlider()
-
-    }
-    
-    func changeColor () {
-        colorDefinitionMini.backgroundColor = UIColor(
-            red: CGFloat(redSlider.value),
-            green: CGFloat(greenSlider.value),
-            blue: CGFloat(blueSlider.value),
-            alpha: 1)
     }
     
     @IBAction func rgbSlider() {
@@ -64,12 +55,19 @@ class SettingsViewController: UIViewController {
         changeColor()
     }
     
-    
     @IBAction func done() {
         delegate.changeColorVC(for: colorDefinitionMini.backgroundColor ?? UIColor.black)
         dismiss(animated: true)
     }
+    private func changeColor () {
+        colorDefinitionMini.backgroundColor = UIColor(
+            red: CGFloat(redSlider.value),
+            green: CGFloat(greenSlider.value),
+            blue: CGFloat(blueSlider.value),
+            alpha: 1)
+    }
 }
+
 
 extension SettingsViewController {
     private func showAlert(title: String, message: String) {
@@ -83,11 +81,9 @@ extension SettingsViewController {
     }
 }
 
-
 extension SettingsViewController: UITextFieldDelegate {
-
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
-        
         
         guard let newValue = textField.text else { return }
         
@@ -95,38 +91,23 @@ extension SettingsViewController: UITextFieldDelegate {
             redSlider.value = Float(newValue) ?? 0
             rgbSlider()
             if redSlider.value != Float(newValue) {
-                textField.text = ""
-                showAlert(title: "ggg", message: "ggg")
+                redTF.text = " "
+                showAlert(title: "ERROR!!!", message: "Enter a value between 0 and 1")
             }
-        
-            
-            
-            
-            
-            
-//            if Float(newValue) ?? 0 < 0 && Float(newValue) ?? 1 > 1 {
-//            if Int(newValue) ?? "" < 0 && Int(newValue) ?? "" > 1 {
-//            showAlert(title: "ggg", message: "fff")
-//            }
-//            }
-            
         } else if textField == greenTF {
             greenSlider.value = Float(newValue) ?? 0
             rgbSlider()
+            if greenSlider.value != Float(newValue) {
+                greenTF.text = " "
+                showAlert(title: "ERROR!!!", message: "Enter a value between 0 and 1")
+            }
         } else if textField == blueTF {
             blueSlider.value = Float(newValue) ?? 0
             rgbSlider()
-
+            if blueSlider.value != Float(newValue) {
+                blueTF.text = " "
+                showAlert(title: "ERROR!!!", message: "Enter a value between 0 and 1")
+            }
         }
-        
-//        guard let value = Int(textField.text) else { return }
-//        if value < 0 && value > 1 {
-//            showAlert(title: "Invalid value entered",
-//                      message: "You must enter the values ​​of the required format")
-//        }
-//        changeTF()
-//
-//        guard let
     }
-    
 }
